@@ -1,0 +1,207 @@
+.section {
+    &-hero-banner {
+
+        .container {
+            max-width: 100%;
+            padding: 0;
+        }
+
+        &-home {
+            .hero-banner-img img {
+                object-position: 50% 100%;
+            }
+        }
+    }
+
+    &-hero-summary {
+        padding: 111px 0 58px;
+    }
+
+    &-home-courses {
+        padding: 149px 0 135px;
+    }
+
+    &-home-pro {
+        padding: 105px 0 92px;
+    }
+}
+
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 610px;
+    overflow: hidden;
+
+    &-img {
+        @include absoldefault;
+
+        img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-text {
+        @include absolcenter;
+        width: 100%;
+        padding: 1rem 2rem;
+        text-align: center;
+    }
+
+    &-title {
+        color: #fff;
+        font-family: $font-1;
+        font-size: 100px;
+        font-weight: 400;
+    }
+}
+
+.hero-summary {
+    position: relative;
+
+    &-text {}
+}
+
+.brush-text {
+    position: relative;
+    max-width: 844px;
+    height: 145px;
+    @include margin-auto;
+    text-align: center;
+
+    &-title {}
+
+    &-img {
+        position: absolute;
+        width: 326px;
+
+        img {
+            width: 100%;
+        }
+
+        &-1 {
+            bottom: 0;
+            right: 50%;
+        }
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 38px;
+    height: 53px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    img {}
+}
+
+.home-courses {
+    &-col {
+        padding: 1.5rem;
+    }
+
+    &-cont {
+        .heading {
+            margin-bottom: 51px;
+        }
+
+        p {
+            font-family: $font-2;
+            font-size: 45px;
+            font-weight: 400;
+            max-width: 600px;
+            color: $color-main;
+            margin-bottom: 66px;
+        }
+
+        a {
+            font-family: $font-1;
+            font-size: 17px;
+            font-weight: 400;
+            border-bottom: 1px solid $color-main;
+            padding-bottom: 2px;
+            padding-right: 2px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        &-border {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+                content: "";
+                @include absolcenter;
+                width: 1px;
+                height: 577px;
+                background-image: url('../images/icons/dotted-border.svg');
+                background-size: auto 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.home-pro {
+    .section-head {
+        margin-bottom: 99px;
+    }
+
+    &-col {
+        padding: 17px 33px;
+    }
+
+    &-card {
+        padding: 17px 0 27px;
+        border: 1px solid transparent;
+        border-radius: 20px;
+        transition: all .2s ease-in;
+
+        a:hover {
+            color: $color-black;
+        }
+
+        &-img {
+            margin-bottom: 30px;
+
+            img {
+                width: 100%;
+                max-width: 220px;
+            }
+        }
+
+        &-name {
+            font-family: $font-1;
+            font-size: 15px;
+            font-weight: 400;
+            margin-bottom: 0;
+            letter-spacing: 4.5px;
+            line-height: 30px;
+            text-transform: uppercase;
+        }
+
+        &:hover {
+            border-color: $color-main;
+        }
+    }
+
+    .link-common {
+        display: inline-block;
+        margin-top: 116px;
+    }
+
+    @media (min-width: 992px) {
+        &-col {
+            flex: 0 0 20%;
+            max-width: 20%;
+        }
+    }
+}

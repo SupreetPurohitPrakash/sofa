@@ -1,0 +1,212 @@
+.footer {
+    position: relative;
+    background-color: $color-gray;
+    padding-top: 9rem;
+
+    &-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50rem;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &-map {
+        max-width: 120rem;
+        @include margin-auto;
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            margin-bottom: -.8rem;
+        }
+
+        @include respond(tabland-min) {
+            iframe {
+                height: 550px;
+            }
+        }
+    }
+
+    &-top,
+    &-bot {
+        z-index: 1;
+        position: relative;
+    }
+
+    &-top {
+        overflow: hidden;
+
+        .section-body {
+            position: relative;
+        }
+    }
+
+    &-form {
+        padding-top: 2rem;
+
+        &-wrap {
+
+            padding: 4rem 5rem;
+            text-align: center;
+            border-radius: 6px;
+            background-color: #fff;
+            box-shadow: 1px 1px 5px 1px rgba(#000, .2);
+
+            .heading-mini {
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                max-width: 28rem;
+                @include margin-auto;
+            }
+        }
+
+        .formfield {
+            position: relative;
+
+            i {
+                @include absoltopcenter;
+                left: 2rem;
+                color: $color-main;
+
+                &::after {
+                    content: "";
+                    @include absoltopcenter;
+                    right: -15px;
+                    width: 1px;
+                    height: 12px;
+                    background-color: rgba(#000, .25);
+                }
+            }
+        }
+
+        input:not([type="submit"]) {
+            padding-left: 6rem;
+            background-color: #f7f1e5;
+            border-radius: 225px;
+            border: 0;
+        }
+
+        button[type="submit"] {
+            padding: .5rem 1rem;
+            color: #fff;
+            width: 100%;
+            font-family: $font-1;
+            font-size: 2rem;
+            font-weight: 700;
+            background-color: $color-main;
+            border-radius: 225px;
+            border: 0;
+            border-bottom: 3px solid transparent;
+            transition: all .2s ease-in;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 3px solid darken($color-main, 15%);
+
+            }
+        }
+
+        @include respond(tabland-min) {
+            &-wrap {
+                @include absoltopcenter;
+                right: 0;
+            }
+        }
+
+        @include respond(tabland) {
+            &-wrap {
+                margin: 2rem 0;
+            }
+        }
+    }
+
+
+    &-bot {
+        color: #fff;
+        background: $color-black;
+        background: linear-gradient(to bottom, $color-black, darken($color-black, 5%));
+    }
+
+    &-info {
+        &-row {
+            align-items: center;
+        }
+
+        span {
+            font-family: $font-1;
+            font-size: 2rem;
+            font-weight: 800;
+            display: block;
+
+            i {
+                color: $color-main;
+                margin-right: .75rem;
+            }
+        }
+
+        @include respond(tabland) {
+            text-align: center;
+
+            &-col {
+                padding: .5rem 1.5rem;
+            }
+        }
+    }
+
+    &-social-icons {
+
+        a {
+            display: inline-block;
+            width: 4.5rem;
+            height: 4.5rem;
+            line-height: 4.5rem;
+            text-align: center;
+            color: $color-black;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: all .2s ease-in;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: $color-main;
+            }
+        }
+
+        @include respond(tabland-min) {
+            text-align: right;
+        }
+    }
+
+    &-bot {
+        font-family: $font-1;
+        font-size: 1.8rem;
+        font-weight: 800;
+        padding: 1rem 0;
+
+
+        &-row {
+            align-items: center;
+        }
+    }
+
+    &-desig {
+        .container {
+            border-top: 1px solid rgba(#fff, .1);
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+    }
+}
