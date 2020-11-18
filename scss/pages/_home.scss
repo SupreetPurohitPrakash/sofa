@@ -151,13 +151,14 @@
 }
 
 .home-pro {
+    max-width: 1230px;
+    @include margin-auto;
+
     .section-head {
         margin-bottom: 99px;
     }
 
-    &-col {
-        padding: 17px 33px;
-    }
+    &-col {}
 
     &-card {
         padding: 17px 0 27px;
