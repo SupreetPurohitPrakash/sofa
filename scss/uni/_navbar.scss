@@ -260,10 +260,15 @@
         }
     }
 
-    @include respond(tabland-smdesktop) {
+    @media (min-width: 992px) and (max-width: 1200px) {
         >li {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
 
-            >a {}
+            >a {
+                font-size: 12px;
+            }
         }
     }
 
@@ -315,8 +320,8 @@
 
 .nav-toggle {
     z-index: 2;
-    width: 40px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     position: relative;
     margin: 0.5rem;
     -webkit-transform: rotate(0deg);
@@ -352,11 +357,11 @@
         }
 
         &:nth-child(2) {
-            top: 12.5px;
+            top: 10px;
         }
 
         &:nth-child(3) {
-            top: 25px;
+            top: 20px;
         }
     }
 

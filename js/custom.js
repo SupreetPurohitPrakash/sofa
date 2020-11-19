@@ -113,6 +113,34 @@ jQuery(document).ready(function ($) {
   //   bodyPaddingForHeader();
   // });
 
+  $('.courses-slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS44ODIiIGhlaWdodD0iMzguMzUiIHZpZXdCb3g9IjAgMCAxOS44ODIgMzguMzUiPg0KICA8ZyBpZD0iR3JvdXBfMjAzOSIgZGF0YS1uYW1lPSJHcm91cCAyMDM5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDA5LjA5MSAtMTYzNS4yMzYpIHJvdGF0ZSg5MCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzEyOTciIGRhdGEtbmFtZT0iUGF0aCAxMjk3IiBkPSJNNzM0LjM0MS0yNzAuNGwxOC44MjEsMTguODIxLTE4LjgyMSwxOC44MjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0MDIuODMxIDI1NS4yMjEpIHJvdGF0ZSg5MCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzM0MzQzNCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPC9nPg0KPC9zdmc+DQo=" /></button>',
+    nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOS44ODIiIGhlaWdodD0iMzguMzUiIHZpZXdCb3g9IjAgMCAxOS44ODIgMzguMzUiPg0KICA8ZyBpZD0iR3JvdXBfMjAzOCIgZGF0YS1uYW1lPSJHcm91cCAyMDM4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtOTg5LjIwOSAxNjczLjU4Nikgcm90YXRlKC05MCkiPg0KICAgIDxwYXRoIGlkPSJQYXRoXzEyOTciIGRhdGEtbmFtZT0iUGF0aCAxMjk3IiBkPSJNNzM0LjM0MS0yNzAuNGwxOC44MjEsMTguODIxLTE4LjgyMSwxOC44MjEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0MDIuODMxIDI1NS4yMjEpIHJvdGF0ZSg5MCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzM0MzQzNCIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBzdHJva2Utd2lkdGg9IjEiLz4NCiAgPC9nPg0KPC9zdmc+DQo=" /></button>',
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
   $(".side-menu-toggle,.side-menu-bg").click(function () {
     $(".nav-toggle").toggleClass("open");
     $("#menu").toggleClass("active");
