@@ -43,16 +43,17 @@
               <nav id="menu">
                 <ul class="navul">
                   <li><a href="./">Home</a></li>
-                  <li><a href="#">Ateliers courses</a></li>
-                  <li><a href="#">Online courses</a></li>
-                  <li><a href="#">Teachers</a></li>
-                  <li><a href="#">Community</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a href="./ateliers-courses.html">Ateliers courses</a></li>
+                  <li><a href="./online-courses.html">Online courses</a></li>
+                  <li><a href="./teachers.html">Teachers</a></li>
+                  <li><a href="./community.html">Community</a></li>
+                  <li><a href="./contact.html">Contact</a></li>
                 </ul>
               </nav>
             </div>
             <div class="header-main-btns">
-              <a href="#" class="header-btn-search"><img src="images/icons/search.svg" alt=""></a>
+              <a data-toggle="modal" data-target="#modalSearch" href="#"
+                class="header-btn-search modal-trigger-search"><img src="images/icons/search.svg" alt=""></a>
               <div class="header-main-social dis-sm">
                 <span><a href="#"><img src="images/icons/facebook.svg" alt=""></a></span>
                 <span><a href="#"><img src="images/icons/instagram.svg" alt=""></a></span>
@@ -86,9 +87,9 @@
           <div class="section-inner">
             <div class="hero-summary">
               <div class="hero-summary-text">
-                <div class="brush-text">
+                <div class="brush-text brush-text-1 text-center">
                   <div class="brush-text-title heading">Learn skills that renew</div>
-                  <div class="brush-text-img brush-text-img-1"><img src="images/brush/brush-pink.png" alt=""></div>
+                  <div class="brush-text-img"><img src="images/brush/brush-pink.png" alt=""></div>
                 </div>
               </div>
               <button class="scroll-down">
@@ -107,7 +108,8 @@
                 <div class="home-courses-col col-lg-5">
                   <div class="home-courses-cont">
                     <h3 class="heading">Ateliers Courses</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    <p class="heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                      tempor invidunt
                       ut labore et dolore magna aliquyam</p>
                     <a href="#">Read more</a>
                   </div>
@@ -118,7 +120,8 @@
                 <div class="home-courses-col col-lg-5">
                   <div class="home-courses-cont">
                     <h3 class="heading">Online Courses</h3>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                    <p class="heading">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                      tempor invidunt
                       ut labore et dolore magna aliquyam</p>
                     <a href="#">Read more</a>
                   </div>
@@ -442,41 +445,42 @@
         </div>
       </section>
 
-      <section class="section section-home-info">
+      <section class="section section-home-info section-main-content">
+        <div class="section-bg">
+          <img class="imgtobg-img" src="images/1920x1080_3.jpg" alt="">
+        </div>
         <div class="container">
-          <div class="section-bg">
-            <img class="imgtobg-img" src="images/1920x1080_3.jpg" alt="">
-          </div>
           <div class="section-inner">
-            <div class="home-info">
-              <div class="home-info-row row">
-                <div class="home-info-col col-lg-6">
-                  <div class="home-info-img-collection">
-                    <div class="home-info-img home-info-img-1">
+            <div class="main-content">
+              <div class="main-content-row row">
+                <div class="main-content-col main-content-col-img col-lg-6">
+                  <div class="main-content-img-collection main-content-img-collection">
+                    <img src="images/collage-1.png" class="img-fluid" alt="">
+                    <!-- <div class="main-content-img main-content-img-1">
                       <img class="imgtobg-img" src="images/art-school_1.jpg" alt="">
                     </div>
-                    <div class="home-info-img home-info-img-2">
+                    <div class="main-content-img main-content-img-2">
                       <img class="imgtobg-img" src="images/Kristin-Painting.jpg" alt="">
                     </div>
-                    <div class="home-info-img home-info-img-3">
+                    <div class="main-content-img main-content-img-3">
                       <img class="imgtobg-img" src="images/Drawing-in-the-gardenD.jpg" alt="">
-                    </div>
+                    </div> -->
                   </div>
                 </div>
-                <div class="home-info-col col-lg-6">
-                  <div class="home-info-text">
+                <div class="main-content-col main-content-col-text col-lg-6 padd-left-lg">
+                  <div class="main-content-text max-width--480">
                     <h2 class="heading">Got a question ?<span class="d-block">come say hi !</span></h2>
-                    <div class="home-info-box">
+                    <div class="main-content-info">
                       <span>Building 13</span>
                       <span>1100a Middle Head Rd</span>
                       <span>Mosman 2088</span>
                     </div>
-                    <div class="home-info-box">
+                    <div class="main-content-info">
                       <span>t: 0407257943</span>
                       <span>e: kristin@schooloffineart.com</span>
                     </div>
-                    <div class="home-info-box">
-                      <span><a href="#" class="link-common">Contact us</a></span>
+                    <div class="main-content-info">
+                      <span><a href="./contact.html" class="link-common">Contact us</a></span>
                     </div>
                   </div>
                 </div>
@@ -551,8 +555,70 @@
   </div>
 
 
+  <!-- Modal  search -->
+  <div class="modal fade custom-modal custom-modal-search" id="modalSearch" tabindex="-1" role="dialog">
+    <div class="custom-modal-bg" data-dismiss="modal">
+      <img src="images/icons/close.svg" alt="">
+    </div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content custom-modal-content">
+        <div class="search-box">
+          <input type="text" name="search" placeholder="Search">
+          <button><img src="images/icons/search-white.svg" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal  search -->
+  <div class="modal fade custom-modal custom-modal-course" id="modalCourse" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content custom-modal-content">
+        <div class="custom-modal-exit" data-dismiss="modal">
+          <img src="images/icons/exit.svg" alt="">
+        </div>
+        <div class="purchase-modal">
+          <div class="purchase-modal-img">
+            <img src="images/Class_Penny_3.jpg" alt="">
+          </div>
+          <div class="purchase-modal-cont">
+            <div class="purchase-modal-head">
+              <h2 class="heading">Beginners painting</h2>
+              <div class="price">
+                <span>$395</span>
+                for 8 wks term
+              </div>
+            </div>
+            <div class="purchase-modal-body">
+              <div class="purchase-modal-desc">
+                <p>This course is for anyone wanting to learn the skills of art no matter how little previous experience
+                  you’ve had. The class is designed for beginners and will take you through the absolute basics of line,
+                  shape, tone, and composition as well as how to use acrylic paints. It’s the perfect class to take if
+                  you
+                  have never had any art experience but have always promised yourself you willl one day. Start at the
+                  beginning and learn basic techniques and fundamentals of art making. You will be surprised how quickly
+                  you
+                  will develop basic painting skills.</p>
+              </div>
+              <div class="purchase-modal-details">
+                <a href="#" class="link-box"><img src="images/icons/plus.svg" alt=""> Book Now</a>
+
+                <p><span>Teacher</span><span>Penny Harkness</span></p>
+                <p><span>Day</span><span>Monday</span></p>
+                <p><span>Time</span><span>9.30 - 12.30</span></p>
+                <p>Please ring <a href="tel:0407257943">0407257943</a> to check availability</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <script src="./js/bundle-min.js"></script>
   <script src="./js/custom.js" defer></script>
+
 </body>
 
 </html>

@@ -3,9 +3,15 @@
 
     &-bg {
         @include absoldefault;
+
+        .imgtobg-o {
+            background-position: top;
+        }
     }
 
     &-hero-banner {
+        z-index: 1;
+        position: relative;
 
         .container {
             max-width: 100%;
@@ -40,10 +46,82 @@
             max-width: 100%;
             padding: 0;
         }
+
+        &-sm {
+            .cta {
+                &-text .heading {
+                    margin-bottom: 0;
+                }
+
+                &-img {
+                    height: 359px;
+                }
+            }
+        }
     }
 
-    &-home-info {
-        padding: 140px 0;
+    @media (min-width: 992px) {
+        &-main-content {
+            padding: 140px 0;
+        }
+
+        &-main-content-points {
+            padding: 152px 0;
+        }
+
+        &-main-content-1234 {
+            padding: 110px 0;
+
+            .heading {
+                margin-bottom: 16px;
+
+                &-block {
+                    margin-bottom: 57px;
+                }
+            }
+        }
+
+        &-main-content-online {
+            padding-top: 131px;
+            padding-bottom: 146px;
+        }
+
+        &-main-content-online-1 {
+            padding-top: 314px;
+            padding-bottom: 373px;
+        }
+
+        &-main-content-online-2 {
+            .heading {
+                margin-bottom: 16px;
+
+                &-block {
+                    margin-bottom: 57px;
+                }
+            }
+        }
+
+        &-technhis {
+            padding: 116px 0;
+        }
+
+        &-spacer {
+            min-height: 879px;
+        }
+
+        &-technhis-1 {
+            padding-top: 133px;
+            padding-bottom: 248px;
+        }
+
+        &-courselist {
+            padding-top: 161px;
+            padding-bottom: 112px;
+
+            .section-head {
+                margin-bottom: 117px;
+            }
+        }
     }
 
     @media (max-width: 567px) {
@@ -92,6 +170,41 @@
         font-weight: 400;
     }
 
+    &-breadcrumbs {
+        position: absolute;
+        top: calc(100% + 20px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1480px;
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            color: $color-black;
+            display: inline-block;
+
+            a {
+                color: #B9B9B9;
+
+                &::after {
+                    content: ">";
+                    display: inline-block;
+                    margin: 0 10px;
+                }
+
+                &:hover {
+                    color: $color-main;
+
+                    &::after {
+                        color: #B9B9B9;
+                    }
+                }
+            }
+        }
+    }
+
     @media (max-width: 991px) {
         height: 450px;
 
@@ -111,61 +224,6 @@
 
 .hero-summary {
     position: relative;
-
-    &-text {}
-}
-
-.brush-text {
-    position: relative;
-    max-width: 844px;
-    @include margin-auto;
-    text-align: center;
-    padding-bottom: 85px;
-
-    &-title {}
-
-    &-img {
-        position: absolute;
-        width: 326px;
-
-        img {
-            width: 100%;
-        }
-
-        &-1 {
-            bottom: 0;
-            right: 50%;
-        }
-    }
-
-    @media (max-width: 991px) {
-        &-title {
-            font-size: 32px;
-        }
-
-        &-img {
-            width: 250px;
-        }
-    }
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 38px;
-    height: 53px;
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    outline: none;
-
-    &:hover,
-    &:focus {
-        outline: none;
-    }
-
-    img {}
 }
 
 .home-courses {
@@ -179,9 +237,9 @@
         }
 
         p {
-            font-family: $font-2;
-            font-size: 45px;
-            font-weight: 400;
+            // font-family: $font-2;
+            // font-size: 45px;
+            // font-weight: 400;
             max-width: 600px;
             color: $color-main;
             margin-bottom: 66px;
@@ -366,6 +424,8 @@
         }
 
         &-link {
+            cursor: pointer;
+
             &:hover {
                 color: $color-black;
             }
@@ -400,6 +460,7 @@
 
         &-details {
             display: flex;
+            flex-wrap: wrap;
 
             p,
             span {
@@ -411,11 +472,12 @@
             }
 
             p {
-                width: calc(100% - 145px);
+                // width: calc(100% - 145px);
+                flex: auto;
             }
 
             span {
-                width: 145px;
+                flex: 0 0 145px;
             }
         }
 
@@ -490,74 +552,167 @@
     }
 }
 
-.home-info {
-    &-img {
+.home-info {}
+
+.custom-modal {
+    &-bg {
+        cursor: pointer;
+        text-align: center;
+        padding: 20px 0;
+        @include absoldefault;
+
+        img {
+            transition: all .2s ease-in;
+
+            &:hover {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &-content {
+        margin-top: 205px;
+        background-color: #fff;
+        @include margin-auto;
+    }
+
+    &-exit {
         position: absolute;
+        top: 36px;
+        right: 31px;
+    }
 
-        &-collection {
-            position: relative;
-            width: 100%;
-            max-width: 730px;
-            height: 602px;
-        }
+    .modal-dialog {
+        max-width: 1020px;
+        width: 100%;
+    }
 
-        &-1 {
-            top: 0;
-            right: 0;
-            width: 480px;
-            height: 348px;
-            width: 68%;
-            height: 58%;
-        }
+    &-search .modal-dialog {
+        max-width: 600px;
+        background-color: transparent;
+    }
+}
 
-        &-2 {
-            bottom: 85px;
-            left: 0;
-            width: 428px;
-            height: 249px;
-            width: 60%;
-            height: 41%;
-        }
+.purchase-modal {
+    &-img {
+        width: 100%;
+        padding: 23px 20px 0px;
 
-        &-3 {
-            bottom: 0;
-            right: 0;
-            width: 230px;
-            height: 187px;
-            width: 32%;
-            height: 31%;
+        img {
+            @include imgfit;
+            height: 377px;
         }
     }
 
-    .heading {
-        margin-bottom: 32px;
+    &-head,
+    &-body {
+        padding-left: 145px;
+        padding-right: 73px;
     }
 
-    &-box {
-        margin-bottom: 31px;
+    &-head {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 36px;
+        padding-bottom: 36px;
 
-        span {
-            display: block;
-            font-family: $font-1;
-            font-size: 17px;
-            font-weight: 400;
-            letter-spacing: 1.19;
-            line-height: 30px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        &-col {
-            padding: 0 70px;
-        }
-    }
-
-    @media (max-width: 567px) {
-        &-img-collection {
-            max-width: 450px;
-            height: 300px;
+        .price {
+            flex: 0 0 230px;
             margin-left: auto;
-            margin-bottom: 30px;
+        }
+    }
+
+    &-title {
+        flex: auto;
+    }
+
+    &-body {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 43px;
+        padding-bottom: 27px;
+    }
+
+    &-desc {
+        flex: 0 0 454px;
+    }
+
+    &-details {
+        flex: 0 0 230px;
+        margin-left: auto;
+
+        .link-box {
+            color: $color-black;
+            margin-bottom: 36px;
+
+            img {
+                width: 16px;
+                margin-left: 0;
+                margin-right: 28px;
+            }
+        }
+
+        p {
+            margin-bottom: 13px;
+
+            span {
+                display: block;
+            }
+        }
+
+    }
+
+    &-notice {
+        margin-top: 38px;
+    }
+}
+
+#modalSearch .modal-content {
+    background-color: transparent;
+}
+
+.search-box {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    @include margin-auto;
+
+    input {
+        color: #fff;
+        font-size: 22px;
+        padding: 10px 20px 10px 60px;
+        width: 100%;
+        height: 60px;
+        background-color: transparent;
+        border: 2px solid #fff;
+        border-radius: 225px;
+
+        &::placeholder {
+            font-size: 22px;
+        }
+    }
+
+    button {
+        @include absoltopcenter;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        padding: 0;
+        border: 0;
+        border-radius: 225px 0 0 225px;
+        background-color: transparent;
+        outline: none;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+
+        img {
+            width: 100%;
+            max-width: 25px;
         }
     }
 }

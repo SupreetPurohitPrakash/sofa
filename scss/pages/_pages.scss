@@ -1,0 +1,140 @@
+.technhis {
+    &-row {
+        margin-left: 14px;
+        margin-right: 14px;
+        margin-bottom: 42px;
+    }
+
+    &-col {
+        padding: 10px 14px;
+    }
+
+    &-card {
+        img {
+            width: 78px;
+            margin-bottom: 77px;
+        }
+    }
+
+    &-spacer {
+        padding: 77px 0;
+    }
+
+    @media (min-width: 991px) {
+        .section-head {
+            margin-bottom: 77px;
+
+            &-mlg {
+                margin-bottom: 180px;
+            }
+
+            &-mxl {
+                margin-bottom: 207px;
+            }
+        }
+    }
+}
+
+.wclass {
+    .section-head {
+        margin-bottom: 100px;
+    }
+
+    &-table {
+        &-row {
+            align-items: center;
+        }
+
+        &-head {
+            text-align: center;
+            border: 2px dotted $color-black;
+            border-width: 2px 0;
+        }
+
+        &-head &-row {
+            padding: 28px 20px;
+        }
+
+        &-body &-row {
+            padding: 0 20px;
+        }
+
+        &-body &-row:not(:last-child) {
+            border-bottom: 2px dotted $color-black;
+        }
+
+        &-col {
+            padding: 45px 15px 36px;
+
+            &-mid {
+                @include margin-auto;
+            }
+
+            &-aft {
+                margin-left: auto;
+            }
+        }
+
+        &-head &-col {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.courselist {
+    &-col {
+        padding: 10px 12px;
+    }
+
+    &-link {
+        margin-top: 80px;
+    }
+
+    @media (min-width: 991px) {
+        &-link {
+            margin-top: 180px;
+        }
+
+    }
+}
+
+.filter {
+    &-head {
+        font-family: $font-1;
+        font-size: 17px;
+        letter-spacing: 1.19px;
+        line-height: 30px;
+        position: relative;
+        margin-bottom: 81px;
+        padding-bottom: 38px;
+        border-bottom: 2px solid $color-black;
+    }
+
+    &-list {
+        padding-left: 0;
+        margin-bottom: 0;
+
+        li {
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: 45px;
+            }
+
+            span {
+                color: $color-blur;
+                display: inline-block;
+                margin-left: 16px;
+            }
+        }
+    }
+
+    &-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: transparent;
+        border: 0;
+    }
+}
