@@ -60,6 +60,10 @@ a {
   &:focus {
     outline: none;
   }
+
+  &[data-toggle="modal"] {
+    cursor: pointer;
+  }
 }
 
 p {
@@ -154,4 +158,8 @@ i.fa-phone {
       margin-bottom: 2rem;
     }
   }
+}
+
+.custom-modal {
+  padding: 0 40px;
 }

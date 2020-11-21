@@ -119,7 +119,10 @@ jQuery(document).ready(function ($) {
   //   console.log('tatatat')
   // });
 
-  $('#modalSearch,#modalCourse').on('show.bs.modal', function (event) {
+  // lightcase
+  $("a[data-rel^=lightcase]").lightcase();
+
+  $('.custom-modal').on('show.bs.modal', function (event) {
     $('html').addClass('overflowYStop');
   }).on("hidden.bs.modal", function () {
     $('html').removeClass('overflowYStop');
@@ -152,6 +155,83 @@ jQuery(document).ready(function ($) {
       }
     ]
   });
+
+  // $('.profile-modal-hero-preview-slider').slick({
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 300,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   fade: true,
+  //   arrows: true,
+  //   prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <g id="Group_1987" data-name="Group 1987" transform="translate(1383 609) rotate(180)"> <path id="Path_1329" data-name="Path 1329" d="M14,0A14,14,0,1,1,0,14,14,14,0,0,1,14,0Z" transform="translate(1355 581)" fill="#fff"/> <g id="Group_1985" data-name="Group 1985" transform="translate(403.864 2235.149) rotate(-90)"> <path id="Path_1297" data-name="Path 1297" d="M0,0,4.772,4.772,0,9.544" transform="translate(1645.133 964.136) rotate(90)" fill="none" stroke="#343434" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/> </g> </g></svg></button>',
+  //   nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <g id="Group_1986" data-name="Group 1986" transform="translate(-1355 -581)"> <path id="Path_1329" data-name="Path 1329" d="M14,0A14,14,0,1,1,0,14,14,14,0,0,1,14,0Z" transform="translate(1355 581)" fill="#fff"/> <g id="Group_1985" data-name="Group 1985" transform="translate(403.864 2235.149) rotate(-90)"> <path id="Path_1297" data-name="Path 1297" d="M0,0,4.772,4.772,0,9.544" transform="translate(1645.133 964.136) rotate(90)" fill="none" stroke="#343434" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/> </g> </g></svg></button>',
+  //   asNavFor: '.profile-modal-hero-collec-slider'
+  // });
+
+
+  if ($('.profile-modal-hero-collec-slider .item').length > 3) {
+    // console.log('more than 3');
+    $('.profile-modal-hero-preview-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      arrows: true,
+      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <g id="Group_1987" data-name="Group 1987" transform="translate(1383 609) rotate(180)"> <path id="Path_1329" data-name="Path 1329" d="M14,0A14,14,0,1,1,0,14,14,14,0,0,1,14,0Z" transform="translate(1355 581)" fill="#fff"/> <g id="Group_1985" data-name="Group 1985" transform="translate(403.864 2235.149) rotate(-90)"> <path id="Path_1297" data-name="Path 1297" d="M0,0,4.772,4.772,0,9.544" transform="translate(1645.133 964.136) rotate(90)" fill="none" stroke="#343434" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/> </g> </g></svg></button>',
+      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <g id="Group_1986" data-name="Group 1986" transform="translate(-1355 -581)"> <path id="Path_1329" data-name="Path 1329" d="M14,0A14,14,0,1,1,0,14,14,14,0,0,1,14,0Z" transform="translate(1355 581)" fill="#fff"/> <g id="Group_1985" data-name="Group 1985" transform="translate(403.864 2235.149) rotate(-90)"> <path id="Path_1297" data-name="Path 1297" d="M0,0,4.772,4.772,0,9.544" transform="translate(1645.133 964.136) rotate(90)" fill="none" stroke="#343434" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/> </g> </g></svg></button>',
+      asNavFor: '.profile-modal-hero-collec-slider'
+    });
+    $('.profile-modal-hero-collec-slider').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: false,
+      asNavFor: '.profile-modal-hero-preview-slider',
+      centerMode: true,
+      focusOnSelect: true
+    });
+  } else {
+    // console.log('less than 3');
+    $('.profile-modal-hero-preview-slider').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      arrows: true,
+      prevArrow: '<button class="slick-prev slick-arrow" aria-label="Previous" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <g id="Group_1987" data-name="Group 1987" transform="translate(1383 609) rotate(180)"> <path id="Path_1329" data-name="Path 1329" d="M14,0A14,14,0,1,1,0,14,14,14,0,0,1,14,0Z" transform="translate(1355 581)" fill="#fff"/> <g id="Group_1985" data-name="Group 1985" transform="translate(403.864 2235.149) rotate(-90)"> <path id="Path_1297" data-name="Path 1297" d="M0,0,4.772,4.772,0,9.544" transform="translate(1645.133 964.136) rotate(90)" fill="none" stroke="#343434" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/> </g> </g></svg></button>',
+      nextArrow: '<button class="slick-next slick-arrow" aria-label="Next" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"> <g id="Group_1986" data-name="Group 1986" transform="translate(-1355 -581)"> <path id="Path_1329" data-name="Path 1329" d="M14,0A14,14,0,1,1,0,14,14,14,0,0,1,14,0Z" transform="translate(1355 581)" fill="#fff"/> <g id="Group_1985" data-name="Group 1985" transform="translate(403.864 2235.149) rotate(-90)"> <path id="Path_1297" data-name="Path 1297" d="M0,0,4.772,4.772,0,9.544" transform="translate(1645.133 964.136) rotate(90)" fill="none" stroke="#343434" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1"/> </g> </g></svg></button>',
+      asNavFor: '.profile-modal-hero-collec-slider'
+    });
+    $('.profile-modal-hero-collec-slider').slick({
+      dots: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: false,
+      asNavFor: '.profile-modal-hero-preview-slider',
+      centerMode: false,
+      focusOnSelect: true
+    });
+
+  }
+
+  $('#modalProfile').on('show.bs.modal', function (event) {
+    setTimeout(function () {
+      $('.profile-modal-hero-preview-slider').slick('setPosition');
+      $('.profile-modal-hero-collec-slider').slick('setPosition');
+      console.log('position reset')
+    }, 250);
+  })
+
+
 
   $('.main-content-slider').slick({
     dots: false,

@@ -143,6 +143,7 @@
 
       &-logo {
         width: 50%;
+        padding: 10px 0;
         text-align: center;
         margin-right: 0;
 
@@ -193,10 +194,10 @@
 }
 
 #menu {
-  @include respond(tabland) {
+  @media (max-width: 991px) {
     opacity: 0;
     position: fixed;
-    top: 96px;
+    top: 130px;
     left: 100%;
     width: 100%;
     height: 100%;
@@ -208,6 +209,14 @@
       left: 0;
       opacity: 1;
     }
+  }
+
+  @media (max-width: 767px) {
+    top: 120px;
+  }
+
+  @media (max-width: 567px) {
+    top: 116px;
   }
 }
 

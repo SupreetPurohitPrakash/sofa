@@ -48,7 +48,7 @@ gulp.task('pack-js', function () {
 });
 
 gulp.task('pack-css', function () {
-    return gulp.src(['./src/css/bootstrap.min.css', './src/css/*.css'])
+    return gulp.src(['./src/css/bootstrap.min.css', './src/css/video-js.css', './src/css/*.css'])
         .pipe(concat('bundle-min.css'))
         .pipe(cleanCSS({
             compatibility: 'ie8',
