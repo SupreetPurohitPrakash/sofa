@@ -668,10 +668,18 @@
 
             .item {
                 padding: 0 12.5px;
+                outline: none;
                 overflow: hidden;
+
+                &:hover,
+                &:focus {
+                    outline: none;
+                    border: 0;
+                }
             }
 
             &-img {
+                cursor: pointer;
                 height: 124px;
                 border-radius: 10px;
                 text-align: center;
