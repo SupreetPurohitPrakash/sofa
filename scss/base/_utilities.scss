@@ -713,6 +713,19 @@
 
   &-slider {
     .slick {
+      &-arrow {
+        width: 19px;
+        height: auto;
+
+        svg {
+          width: 100%;
+        }
+
+        &::before {
+          display: none;
+        }
+      }
+
       &-prev {
         left: auto;
         right: calc(100% + 50px);
