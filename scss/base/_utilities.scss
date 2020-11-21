@@ -512,6 +512,14 @@
     width: 311px;
   }
 
+  &-8 &-img {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    transform: translateX(-50%);
+    width: 122px;
+  }
+
   @media (max-width: 991px) {
     &-title {
       font-size: 32px;
