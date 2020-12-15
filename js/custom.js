@@ -223,14 +223,15 @@ jQuery(document).ready(function ($) {
 
   }
 
-  $('#modalProfile').on('show.bs.modal', function (event) {
-    setTimeout(function () {
-      $('.profile-modal-hero-preview-slider').slick('setPosition');
-      $('.profile-modal-hero-collec-slider').slick('setPosition');
-      console.log('position reset')
-    }, 250);
+  $('.sortby__title').click(function () {
+    $(this).parents('.filter-sort-option').addClass('active');
   })
 
+  $('.sortby__sublist-item').click(function () {
+    console.log('POP');
+    var text = $(this).html();
+    $(this).parents('.filters-sort').find('.sortby__title_content').html(text);
+  });
 
 
   $('.main-content-slider').slick({
